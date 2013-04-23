@@ -14,7 +14,7 @@ Add VxJsUploadBundle in your composer.json:
 ``` json
 {
     "require": {
-        "vx/js-upload-bundle": "*"
+        "vx/js-upload-bundle": "dev-master"
     }
 }
 ```
