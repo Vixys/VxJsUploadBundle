@@ -99,7 +99,7 @@ If you want to change the name of the file after upoad:
 {# ... #}
 ```
 
-*your_filename* should contain the extension. The uploader will add it.
+*your_filename* shouldn't contain the extension. The uploader will add it.
 
 #### For multiple upload
 
