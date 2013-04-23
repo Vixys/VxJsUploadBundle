@@ -1,0 +1,7 @@
+parameters:
+#    vx_js_upload.example.class: Vx\JsUploadBundle\Example
+
+services:
+#    vx_js_upload.example:
+#        class: %vx_js_upload.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

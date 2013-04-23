@@ -1,0 +1,15 @@
+vx_js_upload:
+    pattern:  /upload/{profile}/{filename}
+    defaults: { _controller: VxJsUploadBundle:Upload:upload, profile: default, filename: ~}
+    requirements:
+        _method: POST|GET
+
+vx_js_delete:
+    pattern:  /delete/{profile}/{filename}
+    defaults: { _controller: VxJsUploadBundle:Upload:delete, filename: ~}
+    requirements:
+        _method: DELETE
+
+vx_js_get:
+    pattern:  /get/{profile}
+    defaults: { _controller: VxJsUploadBundle:Upload:get, profile: default }

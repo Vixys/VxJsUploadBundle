@@ -1,0 +1,28 @@
+{
+    "name": "vx/js-upload-bundle",
+    "type": "symfony-bundle",
+    "description": "File uploads bundle for Symfony 2.2 based on Blueimp jQuery File Upload",
+    "keywords": ["upload", "jQuery", "file", "uploader", "blueimp", "symfony", "symfony bundle", "bundle", "symfony-2.2"],
+    "homepage": "https://github.com/Vixys/VxJsUploadBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sébastien Marichal",
+            "email": "sebmarichal@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.3",
+        "symfony/framework-bundle": "2.*"
+    },
+    "autoload": {
+        "psr-0": { "Vx\\JsUploadBundle": "" }
+    },
+    "target-dir": "Vx/JsUploadBundle",
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}
