@@ -52,14 +52,11 @@ class VxJsUploadExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $upload_url = dirname($_SERVER['SCRIPT_FILENAME']);
         foreach ($profiles['profile'] as $profile => $value) {
             if (isset($profiles['profile'][$profile]['upload_dir']))
             {
                 if (substr($profiles['profile'][$profile]['upload_dir'], -1) != '/')
                     $profiles['profile'][$profile]['upload_dir'] .= '/';
-                $profiles['profile'][$profile]['upload_url'] = $this->getFullUrl().'/'.$profiles['profile'][$profile]['upload_dir'];
-                $profiles['profile'][$profile]['upload_dir'] = $upload_url.'/'.$profiles['profile'][$profile]['upload_dir'];
             }
         }
 
@@ -69,16 +66,5 @@ class VxJsUploadExtension extends Extension
         
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-    }
-
-    protected function getFullUrl() {
-        $https = !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';
-        return
-            ($https ? 'https://' : 'http://').
-            (!empty($_SERVER['REMOTE_USER']) ? $_SERVER['REMOTE_USER'].'@' : '').
-            (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : ($_SERVER['SERVER_NAME'].
-            ($https && $_SERVER['SERVER_PORT'] === 443 ||
-            $_SERVER['SERVER_PORT'] === 80 ? '' : ':'.$_SERVER['SERVER_PORT']))).
-            substr($_SERVER['SCRIPT_NAME'],0, strrpos($_SERVER['SCRIPT_NAME'], '/'));
     }
 }
