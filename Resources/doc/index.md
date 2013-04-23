@@ -11,7 +11,7 @@ This version of the bundle was developped and test with Symfony 2.2 only. Howeve
 
 Add VxJsUploadBundle in your composer.json:
 
-```js
+``` json
 {
     "require": {
         "vx/js-upload-bundle": "*"
