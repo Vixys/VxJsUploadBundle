@@ -12,7 +12,7 @@ Requirements
 Installation & Usage
 --------------------
 
-For installation and usage please see the [Usage guide](https://github.com/Vixys/VxJsUploadBundle/blob/master/Resources/doc/index.rst).
+For installation and usage please see the [Usage guide](https://github.com/Vixys/VxJsUploadBundle/blob/master/Resources/doc/index.md).
 
 Licence
 -------
