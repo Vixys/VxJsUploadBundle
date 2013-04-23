@@ -33,6 +33,9 @@ class CustomUploadHandler extends UploadHandler
         $this->delete_url = $delete_url;
         $opts = CustomUploadHandler::getDefaultOptions();
 
+		  if (array_key_exists('image_versions', $options) && is_null($options['image_versions']))
+            $options['image_versions'] = array();
+		
         if ($options != null)
             $opts = array_merge($opts, $options);
 
