@@ -71,6 +71,17 @@ To see all options, take a loot at the [Profile Options](https://github.com/Vixy
 
 **Caution**: The _default_ profile can't be set.
 
+### Import route
+
+In order to use this bundle you have to import the VxJsUploadBundle routing file:
+
+``` yaml
+# app/config/routing.yml
+vx_js_upload_api:
+    resource: "@VxJsUploadBundle/Resources/config/routing.yml"
+    prefix: /u/api
+```
+
 ### Usage
 
 To use it, just add the following line in your code:
