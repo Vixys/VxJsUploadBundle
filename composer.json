@@ -20,9 +20,4 @@
     },
     "target-dir": "Vx/JsUploadBundle",
     "minimum-stability": "dev",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master-dev"
-        }
-    }
 }
