@@ -25,6 +25,7 @@ class CustomUploadHandler extends UploadHandler
             'filename' => null,
             'upload_dir' => dirname($_SERVER['SCRIPT_FILENAME']).'/uploads/',
             'upload_url' => CustomUploadHandler::getFullUrl().'/uploads/',
+            'unique_filename' => false,
             );
     }
 
@@ -51,9 +52,14 @@ class CustomUploadHandler extends UploadHandler
     protected function trim_file_name($name, $type, $index, $content_range) {
         $name = parent::trim_file_name($name, $type, $index, $content_range);
         
-        if (isset($this->options['filename']))
+        if (isset($this->options['filename']) && (!isset($this->options['unique_filename']) || $this->options['unique_filename'] == false))
         {
             $name = $this->options['filename'].strtolower(strrchr($name, '.'));
+        }
+        else if(isset($this->options['unique_filename']) && $this->options['unique_filename'])
+        {
+            $tmp = explode(".", $name);
+            $name = md5(uniqid(rand(), TRUE)).".".$tmp[count($tmp)-1];
         }
         return $name;
     }
