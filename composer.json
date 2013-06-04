@@ -19,10 +19,5 @@
         "psr-0": { "Vx\\JsUploadBundle": "" }
     },
     "target-dir": "Vx/JsUploadBundle",
-    "minimum-stability": "dev",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master-dev"
-        }
-    }
+    "minimum-stability": "dev"
 }
